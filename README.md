@@ -48,14 +48,3 @@ Ce questionnaire va encore évoluer suite à nos échanges avant diffusion dans 
 ```
 git clone https://git.unistra.fr/acrobatt_g3/acrobatt-la1-analyse-metier.git
 ```
-
-***
-### Sujet
-
-- Documents définis individuellement avec chaque groupe.
-- README qui explique succinctement chacun des documents.
-  - Quelle est sa cible ? (développeur, utilisateur, etc.)
-  - Représente-t-il des informations sur l'état actuel de votre projet ou anticipe-t-il certains aspects ?
-  - Quelles sont les parties stables qui ne devraient pas évoluer, celles qui vont encore évoluer un peu, celles qui vont pas mal évoluer, celles qui ne sont pas encore présentes dans le document.
-  - Informations utiles à sa compréhension.
-***
