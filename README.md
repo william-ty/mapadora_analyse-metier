@@ -36,15 +36,3 @@ La collection Postman, à destination des développeurs, permet de tester les re
 C'est une enquête (export html dans les fichiers) mise au point cette semaine sur la plateforme limesurvey de l'unistra (https://sondagesv3.unistra.fr). Elle sera à destination des potentiels utilisateurs et a pour objectifs d'identifier des profils utilisateurs et les fonctionnalités prioritaires en fonction de ces utilisateurs. Cela doit nous permettre de travailler sur la conception et l'ergonomie de l'application (enchaînement des écrans, fonctionnalités à privilégier, etc.), et permettra également de définir des "personas" (profils types utilisateurs) pour envisager des scénarios d'utilisation de l'application. 
 Ce questionnaire va encore évoluer suite à nos échanges avant diffusion dans quelques semaines. Il s'agira ensuite de traiter les résultats.  
 
-## Espaces et outils de travail
-- [Figma](https://www.figma.com/files/project/47923058/Acrobatt?fuid=944326063036739876)
-- [DocumentationAPI](https://mapadora.fr:8443/docs)
-- [Postman](https://app.getpostman.com/join-team?invite_code=2b1c57acd176fe2c67125a998ffb8378&target_code=a63d20e9ad329e84cd75b1630bb069b9)
-- [Discord](https://discord.gg/BRkg6nu5) 
-- [ClickUp](https://app.clickup.com/20480245/v/b/s/32661599)
-
-### Pour récupérer le répo et consulter les fichiers
-
-```
-git clone https://git.unistra.fr/acrobatt_g3/acrobatt-la1-analyse-metier.git
-```
