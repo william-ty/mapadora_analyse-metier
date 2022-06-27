@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html dir="ltr" class="fr dir-ltr  no-js " lang="fr"><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/printable.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/noto.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/survey.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/template-core.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/awesome-bootstrap-checkbox.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/yiistrap.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/ajaxify.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/theme.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/custom.css">
+<link rel="stylesheet" type="text/css" href="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/base.css">
+<script type="text/javascript">window.debugState = {frontend : (0 === 1), backend : (0 === 1)};</script><script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/jquery-3.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/jquery-migrate-3.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/adminbasics.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/lslog.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/pjax.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/pjax_002.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/moment-with-locales.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/survey.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/template-core.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/bootstrap.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/bootstrapconfirm.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/theme.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/ajaxify.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/custom.js" class="headScriptTag"></script>
+<script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/em_javascript.js" class="headScriptTag"></script>
+<title>LimeSurvey - Application assistant de voyage</title>
+    <script src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/prompt.js"></script></head>
+    <body><script type="text/javascript" src="LimeSurvey%20-%20Application%20assistant%20de%20voyage_fichiers/printable.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var LEMmode='survey';
+var LEMgseq='';
+ExprMgr_process_relevance_and_tailoring = function(evt_type,sgqa,type){
+if (typeof LEM_initialized == 'undefined') {
+LEM_initialized=true;
+LEMsetTabIndexes();
+}
+if (evt_type == 'onchange' && (typeof last_sgqa !== 'undefined' && sgqa==last_sgqa) && (typeof last_evt_type !== 'undefined' && last_evt_type == 'TAB' && type != 'checkbox')) {
+  last_evt_type='onchange';
+  last_sgqa=sgqa;
+  return;
+}
+last_evt_type = evt_type;
+last_sgqa=sgqa;
+  relChange212160=false;
+  relChange212161=false;
+  relChange212162=false;
+  relChange212163=false;
+  relChange212164=false;
+  relChange212170=false;
+  relChange212199=false;
+  relChange212193=false;
+  relChange212200=false;
+  relChange212201=false;
+  relChange212209=false;
+  relChange212214=false;
+  relChange212331=false;
+  relChange212341=false;
+  relChange212312=false;
+  relChange212223=false;
+  relChange212222=false;
+  relChange212224=false;
+  relChange212354=false;
+  relChange212359=false;
+  relChangeG0=false;
+  relChangeG1=false;
+  relChangeG2=false;
+  LEMrel212160(sgqa);
+  LEMrel212161(sgqa);
+  LEMrel212162(sgqa);
+  LEMrel212163(sgqa);
+  LEMrel212163(sgqa);
+  LEMrel212164(sgqa);
+  LEMrel212170(sgqa);
+  LEMrel212170(sgqa);
+  LEMrel212193(sgqa);
+  LEMrel212193(sgqa);
+  LEMrel212200(sgqa);
+  LEMrel212201(sgqa);
+  LEMrel212201(sgqa);
+  LEMrel212209(sgqa);
+  LEMrel212209(sgqa);
+  LEMrel212214(sgqa);
+  LEMrel212214(sgqa);
+  LEMrel212331(sgqa);
+  LEMrel212331(sgqa);
+  LEMrel212341(sgqa);
+  LEMrel212341(sgqa);
+  LEMrel212312(sgqa);
+  LEMrel212312(sgqa);
+  LEMrel212223(sgqa);
+  LEMrel212223(sgqa);
+  LEMrel212224(sgqa);
+  LEMrel212224(sgqa);
+  LEMrel212354(sgqa);
+  LEMrel212354(sgqa);
+  LEMrel212359(sgqa);
+  LEMrel212359(sgqa);
+
+}
+function LEMrel212160(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212160(sgqa);
+  relChange212160=true;
+  $('#relevance212160').val('1');
+}
+$('#relevance212160').val('1');  // always true
+}
+
+function LEMrel212161(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212161(sgqa);
+  relChange212161=true;
+  $('#relevance212161').val('1');
+}
+$('#relevance212161').val('1');  // always true
+}
+
+function LEMrel212162(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212162(sgqa);
+  relChange212162=true;
+  $('#relevance212162').val('1');
+}
+$('#relevance212162').val('1');  // always true
+}
+
+function LEMrel212163(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212163(sgqa);
+  relChange212163=true;
+  $('#relevance212163').val('1');
+}
+$('#relevance212163').val('1');  // always true
+}
+
+function LEMrel212164(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212164(sgqa);
+  relChange212164=true;
+  $('#relevance212164').val('1');
+}
+$('#relevance212164').val('1');  // always true
+}
+
+function LEMrel212170(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212170(sgqa);
+  relChange212170=true;
+  $('#relevance212170').val('1');
+}
+$('#relevance212170').val('1');  // always true
+}
+
+function LEMrel212193(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212193(sgqa);
+  relChange212193=true;
+  $('#relevance212193').val('1');
+}
+$('#relevance212193').val('1');  // always true
+}
+
+function LEMrel212200(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212200(sgqa);
+  relChange212200=true;
+  $('#relevance212200').val('1');
+}
+$('#relevance212200').val('1');  // always true
+}
+
+function LEMrel212201(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212201(sgqa);
+  relChange212201=true;
+  $('#relevance212201').val('1');
+}
+$('#relevance212201').val('1');  // always true
+}
+
+function LEMrel212209(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212209(sgqa);
+  relChange212209=true;
+  $('#relevance212209').val('1');
+}
+$('#relevance212209').val('1');  // always true
+}
+
+function LEMrel212214(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212214(sgqa);
+  relChange212214=true;
+  $('#relevance212214').val('1');
+}
+$('#relevance212214').val('1');  // always true
+}
+
+function LEMrel212331(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212331(sgqa);
+  relChange212331=true;
+  $('#relevance212331').val('1');
+}
+$('#relevance212331').val('1');  // always true
+}
+
+function LEMrel212341(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212341(sgqa);
+  relChange212341=true;
+  $('#relevance212341').val('1');
+}
+$('#relevance212341').val('1');  // always true
+}
+
+function LEMrel212312(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212312(sgqa);
+  relChange212312=true;
+  $('#relevance212312').val('1');
+}
+$('#relevance212312').val('1');  // always true
+}
+
+function LEMrel212223(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212223(sgqa);
+  relChange212223=true;
+  $('#relevance212223').val('1');
+}
+$('#relevance212223').val('1');  // always true
+}
+
+function LEMrel212224(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212224(sgqa);
+  relChange212224=true;
+  $('#relevance212224').val('1');
+}
+$('#relevance212224').val('1');  // always true
+}
+
+function LEMrel212354(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212354(sgqa);
+  relChange212354=true;
+  $('#relevance212354').val('1');
+}
+$('#relevance212354').val('1');  // always true
+}
+
+function LEMrel212359(sgqa){
+  var UsesVars = '  ';
+  if (typeof sgqa !== 'undefined' && !LEMregexMatch('/ java' + sgqa + ' /', UsesVars)) {
+  return;
+ }
+
+if (1)
+{
+  LEMval212359(sgqa);
+  relChange212359=true;
+  $('#relevance212359').val('1');
+}
+$('#relevance212359').val('1');  // always true
+}
+function LEMval212160(sgqa){
+  isValidSum212160=true;
+  isValidOther212160=true;
+  isValidOtherComment212160=true;
+
+  if(((1))){
+    $('#vmsg_212160_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212160_default').trigger('classChangeError');
+    isValidOther212160=false;
+  }
+
+  if(isValidSum212160){
+    $('#totalvalue_212160').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212160').trigger('classChangeError');
+  }
+
+  if(isValidOtherComment212160){
+    $('#answer963579X16022X212160othertext').addClass('em_sq_validation').trigger('classChangeGood');
+  }
+  else {
+    $('#answer963579X16022X212160othertext').addClass('em_sq_validation').trigger('classChangeError');
+  }
+}
+
+function LEMval212161(sgqa){
+  isValidSum212161=true;
+  isValidOther212161=true;
+  isValidOtherComment212161=true;
+
+  if(((1))){
+    $('#vmsg_212161_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212161_default').trigger('classChangeError');
+    isValidOther212161=false;
+  }
+
+  if(isValidSum212161){
+    $('#totalvalue_212161').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212161').trigger('classChangeError');
+  }
+
+  if(isValidOtherComment212161){
+    $('#answer963579X16022X212161text').addClass('em_sq_validation').trigger('classChangeGood');
+  }
+  else {
+    $('#answer963579X16022X212161text').addClass('em_sq_validation').trigger('classChangeError');
+  }
+}
+
+function LEMval212162(sgqa){
+  isValidSum212162=true;
+  isValidOther212162=true;
+  isValidOtherComment212162=true;
+
+  if(((1))){
+    $('#vmsg_212162_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212162_default').trigger('classChangeError');
+    isValidOther212162=false;
+  }
+
+  if(isValidSum212162){
+    $('#totalvalue_212162').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212162').trigger('classChangeError');
+  }
+
+  if(isValidOtherComment212162){
+    $('#answer963579X16022X212162text').addClass('em_sq_validation').trigger('classChangeGood');
+  }
+  else {
+    $('#answer963579X16022X212162text').addClass('em_sq_validation').trigger('classChangeError');
+  }
+}
+
+function LEMval212163(sgqa){
+  isValidSum212163=true;
+  isValidOther212163=true;
+  isValidOtherComment212163=true;
+
+  if(((1))){
+    $('#vmsg_212163_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212163_default').trigger('classChangeError');
+    isValidOther212163=false;
+  }
+
+  if(isValidSum212163){
+    $('#totalvalue_212163').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212163').trigger('classChangeError');
+  }
+}
+
+function LEMval212164(sgqa){
+  isValidSum212164=true;
+  isValidOther212164=true;
+  isValidOtherComment212164=true;
+
+  if(((1))){
+    $('#vmsg_212164_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212164_default').trigger('classChangeError');
+    isValidOther212164=false;
+  }
+
+  if(isValidSum212164){
+    $('#totalvalue_212164').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212164').trigger('classChangeError');
+  }
+
+  if(isValidOtherComment212164){
+    $('#answer963579X16022X212164text').addClass('em_sq_validation').trigger('classChangeGood');
+  }
+  else {
+    $('#answer963579X16022X212164text').addClass('em_sq_validation').trigger('classChangeError');
+  }
+}
+
+function LEMval212170(sgqa){
+  isValidSum212170=true;
+  isValidOther212170=true;
+  isValidOtherComment212170=true;
+
+  if(((1))){
+    $('#vmsg_212170_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212170_default').trigger('classChangeError');
+    isValidOther212170=false;
+  }
+
+  if(isValidSum212170){
+    $('#totalvalue_212170').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212170').trigger('classChangeError');
+  }
+}
+
+function LEMval212193(sgqa){
+  isValidSum212193=true;
+  isValidOther212193=true;
+  isValidOtherComment212193=true;
+
+  if(((1))){
+    $('#vmsg_212193_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212193_default').trigger('classChangeError');
+    isValidOther212193=false;
+  }
+
+  if(isValidSum212193){
+    $('#totalvalue_212193').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212193').trigger('classChangeError');
+  }
+}
+
+function LEMval212200(sgqa){
+  isValidSum212200=true;
+  isValidOther212200=true;
+  isValidOtherComment212200=true;
+
+  if(((1))){
+    $('#vmsg_212200_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212200_default').trigger('classChangeError');
+    isValidOther212200=false;
+  }
+
+  if(isValidSum212200){
+    $('#totalvalue_212200').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212200').trigger('classChangeError');
+  }
+
+  if(isValidOtherComment212200){
+    $('#answer963579X16023X212200text').addClass('em_sq_validation').trigger('classChangeGood');
+  }
+  else {
+    $('#answer963579X16023X212200text').addClass('em_sq_validation').trigger('classChangeError');
+  }
+}
+
+function LEMval212201(sgqa){
+  isValidSum212201=true;
+  isValidOther212201=true;
+  isValidOtherComment212201=true;
+
+  if(((1))){
+    $('#vmsg_212201_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212201_default').trigger('classChangeError');
+    isValidOther212201=false;
+  }
+
+  if(isValidSum212201){
+    $('#totalvalue_212201').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212201').trigger('classChangeError');
+  }
+}
+
+function LEMval212209(sgqa){
+  isValidSum212209=true;
+  isValidOther212209=true;
+  isValidOtherComment212209=true;
+
+  if(((1))){
+    $('#vmsg_212209_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212209_default').trigger('classChangeError');
+    isValidOther212209=false;
+  }
+
+  if(isValidSum212209){
+    $('#totalvalue_212209').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212209').trigger('classChangeError');
+  }
+}
+
+function LEMval212214(sgqa){
+  isValidSum212214=true;
+  isValidOther212214=true;
+  isValidOtherComment212214=true;
+
+  if(((1))){
+    $('#vmsg_212214_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212214_default').trigger('classChangeError');
+    isValidOther212214=false;
+  }
+
+  if(isValidSum212214){
+    $('#totalvalue_212214').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212214').trigger('classChangeError');
+  }
+}
+
+function LEMval212331(sgqa){
+  isValidSum212331=true;
+  isValidOther212331=true;
+  isValidOtherComment212331=true;
+
+  if(((1))){
+    $('#vmsg_212331_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212331_default').trigger('classChangeError');
+    isValidOther212331=false;
+  }
+
+  if(isValidSum212331){
+    $('#totalvalue_212331').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212331').trigger('classChangeError');
+  }
+}
+
+function LEMval212341(sgqa){
+  isValidSum212341=true;
+  isValidOther212341=true;
+  isValidOtherComment212341=true;
+
+  if(((1))){
+    $('#vmsg_212341_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212341_default').trigger('classChangeError');
+    isValidOther212341=false;
+  }
+
+  if(isValidSum212341){
+    $('#totalvalue_212341').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212341').trigger('classChangeError');
+  }
+}
+
+function LEMval212312(sgqa){
+  isValidSum212312=true;
+  isValidOther212312=true;
+  isValidOtherComment212312=true;
+
+  if(((1))){
+    $('#vmsg_212312_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212312_default').trigger('classChangeError');
+    isValidOther212312=false;
+  }
+
+  if(isValidSum212312){
+    $('#totalvalue_212312').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212312').trigger('classChangeError');
+  }
+}
+
+function LEMval212223(sgqa){
+  isValidSum212223=true;
+  isValidOther212223=true;
+  isValidOtherComment212223=true;
+
+  if(((1))){
+    $('#vmsg_212223_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212223_default').trigger('classChangeError');
+    isValidOther212223=false;
+  }
+
+  if(isValidSum212223){
+    $('#totalvalue_212223').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212223').trigger('classChangeError');
+  }
+}
+
+function LEMval212224(sgqa){
+  isValidSum212224=true;
+  isValidOther212224=true;
+  isValidOtherComment212224=true;
+
+  if(((1))){
+    $('#vmsg_212224_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212224_default').trigger('classChangeError');
+    isValidOther212224=false;
+  }
+
+  if(isValidSum212224){
+    $('#totalvalue_212224').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212224').trigger('classChangeError');
+  }
+}
+
+function LEMval212354(sgqa){
+  isValidSum212354=true;
+  isValidOther212354=true;
+  isValidOtherComment212354=true;
+
+  if(((1))){
+    $('#vmsg_212354_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212354_default').trigger('classChangeError');
+    isValidOther212354=false;
+  }
+
+  if(isValidSum212354){
+    $('#totalvalue_212354').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212354').trigger('classChangeError');
+  }
+}
+
+function LEMval212359(sgqa){
+  isValidSum212359=true;
+  isValidOther212359=true;
+  isValidOtherComment212359=true;
+
+  if(((1))){
+    $('#vmsg_212359_default').trigger('classChangeGood');
+  }
+  else {
+    $('#vmsg_212359_default').trigger('classChangeError');
+    isValidOther212359=false;
+  }
+
+  if(isValidSum212359){
+    $('#totalvalue_212359').trigger('classChangeGood');
+  }
+  else {
+    $('#totalvalue_212359').trigger('classChangeError');
+  }
+}
+
+/*]]>*/
+</script>
+
+        <div id="limesurvey">
+            <h1>Application assistant de voyage</h1>
+
+            <div class="survey-description"><p>Cette enquête est 
+réalisée dans le cadre de la licence professionnelle "Conception et 
+développement d'applications distribuées" de l'IUT Robert Schuman à 
+Illkirch. Elle a pour but de préciser les profils d'utilisateurs d'une 
+application d'assistant de voyage.</p>
+
+<p>&nbsp;</p>
+</div>
+
+            <div class="survey-welcome">Bonjour et merci d'avoir accepté
+ de répondre à ce quelques questions qui nous permettront d'affiner 
+notre application d'assistant de voyage ! Prêt.e.s à partir ? On y va 
+&gt;&gt;&gt;</div>
+
+            <p class="x-questions">Il y a 20 questions dans ce questionnaire.</p>
+
+                                            <div class="survey-group ">
+    <h2>A propos de vous...</h2>
+    <div class="group-desc">
+        
+    </div>
+                    <div id="question" class="list-radio question-wrapper">
+    <div class="q-text">
+        <h3> Je suis :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212160_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Veuillez sélectionner une réponse ci-dessous</div>
+</div><div class="tip-help">Veuillez sélectionner une seule des propositions suivantes :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Une femme
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Un homme
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Je ne souhaite pas répondre
+	</li>
+	<li class=" other other-item">
+<div class="input-radio"><span></span></div> Autre
+			<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>
+	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="list-radio question-wrapper">
+    <div class="q-text">
+        <h3> Ma tranche d'âge :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212161_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Veuillez sélectionner une réponse ci-dessous</div>
+</div><div class="tip-help">Veuillez sélectionner une seule des propositions suivantes :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Moins de 25 ans
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Entre 25 et 35 ans
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Entre 36 et 45 ans
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Entre 46 et 55 ans
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Entre 56 et 65 ans
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Plus de 65 ans
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Je ne souhaite pas répondre
+	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="list-radio question-wrapper">
+    <div class="q-text">
+        <h3> Je vis dans une commune :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212162_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Veuillez sélectionner une réponse ci-dessous</div>
+</div><div class="tip-help">Veuillez sélectionner une seule des propositions suivantes :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			De moins de 2000 habitants
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			De 2000 à 20 000 habitants
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			De 20 000 à 100 000 habitants
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			De plus de 100 000 habitants
+	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Mon statut :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212163_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Etudiant.e	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		En situation d'emploi ou régulièrement en situation d'emploi	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Retraité.e	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Au chômage	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je ne souhaite pas répondre	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="list-radio question-wrapper">
+    <div class="q-text">
+        <h3> Mon niveau d'études :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212164_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Veuillez sélectionner une réponse ci-dessous</div>
+</div><div class="tip-help">Veuillez sélectionner une seule des propositions suivantes :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			CAP, BEP
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Baccalauréat
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			DEUG, BTS, DUT, DEUST
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Licence, licence professionnelle, BUT
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Maîtrise, master 1
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Master, diplôme d'études approfondies, diplôme d'études supérieures spécialisées, diplôme d'ingénieur
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Doctorat, habilitation à diriger des recherches
+	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        Mettre le niveau de l'année en cours pour les étudiant.e.s.
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Mes centres d'intérêts :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212170_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		La lecture	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		L'écriture (litérature, recherche, poésie...)	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Les arts plastiques (peinture, sculpture, dessin...)	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		La musique	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Le sport (spectateur, joueur, arbitre...)	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Les réseaux sociaux (blog, vlog, streaming...)	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		La cuisine	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Les voyages	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Les sciences	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		L'informatique	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		La vie associative	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Le bricolage	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Le jardinage	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		La vie culturelle (cinéma, théâtre, danse, opéra, spactacle vivant, musées, etc.)	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		La nature	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		L'écologie	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Les nouvelles technologies	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Les sciences humaines	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		L'actualité	</li>
+	<li class=" other other-item">
+<div class="input-checkbox"><span></span></div>Autre:
+		<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+    </div>
+
+                                            <div class="survey-group ">
+    <h2>Votre rapport au voyage</h2>
+    <div class="group-desc">
+        
+    </div>
+                    <div id="question" class="yes-no question-wrapper">
+    <div class="q-text">
+        <h3> J'ai déjà voyagé
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help">Veuillez sélectionner une seule des propositions suivantes :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled">
+	<li>
+		<div class="input-radio"><span></span></div>
+		Oui
+	</li>
+
+	<li>
+		<div class="input-radio"><span></span></div>
+		Non
+	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Je voyage avec :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212193_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Ma/mon conjoint.e 	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Ma famille	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Des amis	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Seul.e	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je ne souhaite pas répondre	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="list-radio question-wrapper">
+    <div class="q-text">
+        <h3> Ma fréquence de voyage :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212200_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Veuillez sélectionner une réponse ci-dessous</div>
+</div><div class="tip-help">Veuillez sélectionner une seule des propositions suivantes :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Une fois par an
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Deux fois par an
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Trois fois par an
+	</li>
+		<li class="">
+		<div class="input-radio"><span></span></div>
+			Plus de trois fois par an
+	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Je peux partir pour :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212201_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Un week-end	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Une semaine	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Deux semaines	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Trois semaines	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Quelques mois	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Un an	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Plus d'un an	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Lorsque je voyage, je planifie :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212209_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Tout de A à Z, mon voyage est prêt	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je prévois les étapes et les dates, et les lieux que je souhaite visiter	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je prévois une date de départ et de retour, rien de plus	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je ne prévois rien et je pars 	</li>
+	<li class=" other other-item">
+<div class="input-checkbox"><span></span></div>Autre:
+		<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Je planifie mon voyage :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212214_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Avec une agence de voyage	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Avec un guide type "Routard"	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je consulte des blogs ou des sites de voyages	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		J'appelle les offices de tourisme locaux	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		En discutant avec d'autres voyageurs	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		A l'aide des réseaux sociaux	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Avec des applications spécialisées 	</li>
+	<li class=" other other-item">
+<div class="input-checkbox"><span></span></div>Autre:
+		<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Mes destinations :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212331_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Mer	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Montagne	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Villes	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		France	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Europe	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Asie	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Océanie	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Amérique	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Afrique	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Mode de transports pour rejoindre le point de destination et/ou se déplacer sur place :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212341_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Voiture	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Bus	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Train	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Vélo	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Marche / course	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Avion	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Canoë Kayak	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Traîneau	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Ski	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Bateau	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+			</li>
+	<li class=" other other-item">
+<div class="input-checkbox"><span></span></div>Autre:
+		<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Ce qui me définit le mieux :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212312_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je suis à l'affut des bons plans pour partir à prix réduit	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		J'ai un bon budget pour voyager, je recherche les établissements "prestige" 	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je recherche des hébergements où il y a des services de gardes d'enfants ou des clubs enfants	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je suis très attentif.ve aux avis en ligne avant de réserver	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		J'aime choisir moi-même mon planning	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		J'aime l'atypique, je cherche à être surpris.e et la nouveauté	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je préfère lorsque je n'ai pas à m'occuper de l'organisation, je laisse ça à des agences	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je n'aime pas passer trop de temps à préparer mon voyage, j'ai tendance à retourner au même endroit	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je suis actif.ve sur les communautés de voyageurs : j'écris des avis, des articles de blogs ou des posts sur les réseaux	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Pour moi, les vacances = soleil et destination chaudes	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je ne porte pas beaucoup d'intérêt au climat pour choisir mes destinations	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je vais toujours vers l'inconnu 	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je fais mon planning de voyage une fois sur place, au jour le jour	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		J'aime l'itinérance : à pied ou à vélo, je fais plusieurs étapes	</li>
+	<li class=" other other-item">
+<div class="input-checkbox"><span></span></div>Autre:
+		<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+    </div>
+
+                                            <div class="survey-group ">
+    <h2>L'assistant de voyage</h2>
+    <div class="group-desc">
+        
+    </div>
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Une application de voyage devrait me permettre de :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212223_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Placer les étapes, lieux à visiter et les trajets sur une carte	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Entregistrer des documents (billets de trains, etc.)	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Créer un album photo de mon voyage	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Tenir un blog	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Partager la planification avec d'autres voyageurs	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Avoir une idée du budget du voyage	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Avoir des suggestions sur les lieux à voir à proximité	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Faire des réservations (transports, hotels etc.)	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		M'inspirer de voyages d'autres voyageurs pour planifier le mien	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Partager mon voyage sur les réseaux sociaux	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Voir tous les évènements à proximité de mes destinations dans mes dates de voyage	</li>
+	<li class=" other other-item">
+<div class="input-checkbox"><span></span></div>Autre:
+		<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="yes-no question-wrapper">
+    <div class="q-text">
+        <h3> Je pourrais utiliser une application pour prévoir mon voyage
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help">Veuillez sélectionner une seule des propositions suivantes :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled">
+	<li>
+		<div class="input-radio"><span></span></div>
+		Oui
+	</li>
+
+	<li>
+		<div class="input-radio"><span></span></div>
+		Non
+	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Ce qui est le plus important pour moi dans une application de voyage :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212224_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		L'outil de planification sur une carte : étapes, trajets, lieux à visiter	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Le blog 	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Le partage du voyage sur les réseaux et les avis des voyageurs	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		L'aspect collaboratif : planifiation à plusieurs, partage des dépenses, etc.	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> Pour prévoir mon voyage, j'utilise :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212354_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Mon smartphone	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Mon ordinateur	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Ma tablette	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Je réserve par téléphone	</li>
+	<li class=" other other-item">
+<div class="input-checkbox"><span></span></div>Autre:
+		<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+                    <div id="question" class="multiple-opt question-wrapper">
+    <div class="q-text">
+        <h3> En voyage, j'emmène avec moi :
+            <span class="mandatory"></span>
+        </h3>
+        <p class="q-scenaria"></p>
+        <p class="q-type-help"></p><div class="tip-help"><div id="vmsg_212359_default" class="ls-question-message ls-em-tip em_default">
+    <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+    Cochez la ou les réponses</div>
+</div><div class="tip-help">Veuillez choisir toutes les réponses qui conviennent :</div><p></p>
+        <p class="q-man-message"></p>
+        <p class="q-validation"></p>
+        <p class="q-fvalidation"></p>
+    </div>
+    <div class="q-answer">
+        
+<ul class="list-print-answers list-unstyled colstyle-ul">
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Mon smartphone	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Mon ordinateur	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Ma tablette	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Un guide de voyage	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Une carte papier	</li>
+	<li class="">
+<div class="input-checkbox"><span></span></div>
+		Un GPS (hors téléphone)	</li>
+	<li class=" other other-item">
+<div class="input-checkbox"><span></span></div>Autre:
+		<div class="form-control print-control input-other" style="width:30em;height:3em"><span></span></div>	</li>
+</ul>
+
+    </div>
+    <div class="q-help">
+        
+    </div>
+</div>
+
+    </div>
+
+            
+            
+            
+            <p class="submit-by">
+                Merci d'avoir rempli ce questionnaire.<br>
+                <br>
+                <br>
+                Envoyer votre questionnaire.<br>
+                Merci d’avoir complété ce questionnaire.<br>
+            </p>
+
+        </div>
+    <script type="text/javascript">
+/*<![CDATA[*/
+
+            try{ 
+                triggerEmClassChange(); 
+            } catch(e) {
+                console.ls.warn('triggerEmClassChange could not be run. Is survey.js correctly loaded?');
+            }
+
+triggerEmRelevance();
+jQuery(document).off('pjax:scriptcomplete.mainBottom').on('ready pjax:scriptcomplete.mainBottom', function() {
+updateMandatoryErrorClass();
+});
+/*]]>*/
+</script>
+
+
+</body></html>

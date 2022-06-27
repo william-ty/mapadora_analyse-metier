@@ -1,0 +1,2085 @@
+{
+	"info": {
+		"_postman_id": "0e0e8f5c-4a8f-4a81-8620-afb5d8b0fbd8",
+		"name": "Acrobatt Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Travel",
+			"item": [
+				{
+					"name": "CREATE Travel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"pm.collectionVariables.set(\"id_travel\", jsonData.travel.id);",
+									"pm.collectionVariables.set(\"id\", jsonData.travel.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"commentary\": \"{{commentary}}\",\n  \"is_finished\": {{is_finished}},\n  \"is_public\": {{is_public}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /travel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /travel/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE /travel/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"commentary\": \"{{commentary}}\",\n  \"is_finished\": {{is_finished}},\n  \"is_public\": {{is_public}},\n  \"id\":{{id}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /travel/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PhotoWithTravel",
+			"item": [
+				{
+					"name": "CREATE : Photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"contentType": "image",
+									"type": "file",
+									"src": "/home/marion/Images/mail.png"
+								},
+								{
+									"key": "is_in_album",
+									"value": "true",
+									"contentType": "",
+									"type": "default"
+								},
+								{
+									"key": "is_public",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "id_element",
+									"value": "{{id_element}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/photo",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"photo"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : Photo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/photo",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"photo"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : Photo/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/photo/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"photo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE : Photo/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"1\",\r\n    \"description\" : \"Superbe update\",\r\n    \"point\":{\r\n        \"type\":\"Point\",\r\n        \"coordinates\": [7.5,48.2]\r\n        },\r\n    \"id_travel\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/photo/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"photo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE : Photo/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/photo/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"photo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "DiaryWithTravel",
+			"item": [
+				{
+					"name": "CREATE : Diary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"var jsonData = pm.response.json();",
+									"pm.collectionVariables.set(\"id\", jsonData.id);",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"id_travel\", 11);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\" : \"{{content}}\",\n    \"is_in_album\": {{is_in_album}},\n    \"id_travel\":{{id_travel}}\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/diary",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"diary"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : Diary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/diary",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"diary"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : Diary/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/diary/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"diary",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE : Diary/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":{{id}},\r\n    \"content\" : \"{{content}}\",\r\n    \"is_in_album\": {{is_in_album}},\r\n    \"id_travel\":{{id_travel}}\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/diary/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"diary",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE : Diary/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/diary/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"diary",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DocumentWithTravel",
+			"item": [
+				{
+					"name": "CREATE : Document",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"id_travel\", 11);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"pm.collectionVariables.set(\"id\", jsonData.id);",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "document",
+									"contentType": "image",
+									"type": "file",
+									"src": "/home/marion/Images/4d6e1c0_gjtXmP0vXuGUjLRQO5AJH2h6.jpg"
+								},
+								{
+									"key": "id_element",
+									"value": "{{id_element}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/document",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"document"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : Document",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/document",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"document"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : Document/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/document/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"document",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE : Document/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"1\",\r\n    \"description\" : \"Superbe update Hello\",\r\n    \"lat\": 7.5,\r\n    \"lng\" : 48.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/photo/update/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"photo",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE : Document/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/document/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"document",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "CREATE : Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"{{name}}\",\r\n    \"execution_date\" : \"{{dateonly}}\",\r\n    \"is_terminated\":{{is_terminated}},\r\n    \"id_element\":{{id_element}},\r\n    \"id_task_list\":{{id_task_list}}\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/task",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"task"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : Task/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/task/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"task",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST: addTagToTask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/task/:id/tag/:idTag",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"task",
+								":id",
+								"tag",
+								":idTag"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								},
+								{
+									"key": "idTag",
+									"value": "{{id_tag}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE : Task/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"1\",\r\n    \"description\" : \"Superbe update\",\r\n    \"lat\": 7.5,\r\n    \"lng\" : 48.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/task/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"task",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE : Task/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/task/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"task",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TaskListTag",
+			"item": [
+				{
+					"name": "CREATE : TaskListTag",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"{{tagName}}\",\r\n    \"id_task_list\":{{id_task_list}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/tasklisttag",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"tasklisttag"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : TaskListTag:/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/tasklisttag/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"tasklisttag",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{idTravel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE : TaskListTag/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"1\",\r\n    \"description\" : \"Superbe update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/tasklisttag/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"tasklisttag",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{idTravel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE : TaskListTag/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/tasklisttag/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"tasklisttag",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{idTravel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "InterestPoint Travel",
+			"item": [
+				{
+					"name": "CREATE : InterestPoint",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"id_step\", null);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"var jsonData = pm.response.json();",
+									"pm.collectionVariables.set(\"id\", jsonData.id);",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"point\": {\r\n    \"type\": \"{{type}}\",\r\n    \"coordinates\": [\r\n      {{lng}},\r\n      {{lat}}\r\n    ]\r\n  },\r\n  \"order\": {{order}},\r\n  \"duration\":{{duration}},\r\n  \"id_step\":{{id_step}},\r\n  \"element_interestpoint\":{\r\n      \"id_travel\":{{id_travel}},\r\n      \"name\":\"{{name}}\",\r\n      \"description\":\"{{description}}\",\r\n      \"predicted_date\":\"{{dateonly}}\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/interestpoint",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"interestpoint"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : InterestPoint/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/interestpoint/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"interestpoint",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST : associate interestpoint to step",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"id_step\", 2);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/interestpoint/:id/step/:idStep",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"interestpoint",
+								":id",
+								"step",
+								":idStep"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								},
+								{
+									"key": "idStep",
+									"value": "{{id_step}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ : InterestPoint",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/interestpoint",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"interestpoint"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE : InterestPoint/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"point\": {\r\n    \"type\": \"{{type}}\",\r\n    \"coordinates\": [\r\n      {{lng}},\r\n      {{lat}}\r\n    ]\r\n  },\r\n  \"order\": {{order}},\r\n  \"duration\":{{duration}},\r\n  \"id_step\":{{id_step}},\r\n  \"element_interestpoint\":{\r\n      \"id_travel\":{{id_travel}},\r\n      \"name\":\"{{name}}\",\r\n      \"description\":\"{{description}}\",\r\n      \"predicted_date\":\"{{dateonly}}\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/interestpoint/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"interestpoint",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE : InterestPoint/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/interestpoint/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"interestpoint",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TripTravel",
+			"item": [
+				{
+					"name": "CREATE",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"id_travel\", 2);",
+									"pm.collectionVariables.set(\"id_itinerary\", 2);",
+									"",
+									"",
+									"pm.collectionVariables.set(\"id_departure_step\", 5);",
+									"pm.collectionVariables.set(\"id_arrival_step\", 6);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_departure_step\": {{id_departure_step}},\n    \"id_arrival_step\": {{id_arrival_step}},\n    \"id_itinerary\":{{id_itinerary}},\n    \"element_trip\": {\n        \"name\": \"{{name}}\",\n        \"description\": \"{{description}}\",\n        \"predicted_date\": \"{{dateonly}}\",\n        \"id_travel\":{{id_travel}}\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/trip",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"trip"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET trip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/trip",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"trip"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{idTravel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET trip/:id",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"id\", 1);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/trip",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"trip"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE /trip",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_departure_step\": 3,\n    \"id_arrival_step\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/trip/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"trip",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /trip Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/trip/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"trip",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{idTravel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StepTravel",
+			"item": [
+				{
+					"name": "CREATE /step",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"id_travel\", 2);",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"point\": {\n    \"type\": \"{{type}}\",\n    \"coordinates\": [\n      {{lng}},\n      {{lat}}\n    ]\n  },\n  \"order\": {{order}},\n  \"duration\":{{duration}},\n  \"element_step\":{\n      \"id_travel\":{{id_travel}},\n      \"name\":\"{{name}}\",\n      \"description\":\"{{description}}\",\n      \"predicted_date\":\"{{dateonly}}\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/step",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"step"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /step",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/step",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"step"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /step/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/step/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"step",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE /step/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":{{id}},\n  \"point\": {\n    \"type\": \"{{type}}\",\n    \"coordinates\": [\n      {{lng}},\n      {{lat}}\n    ]\n  },\n  \"order\": {{order}},\n  \"duration\":{{duration}},\n  \"element_step\":{\n      \"id\";{{id_element}},\n      \"id_travel\":{{id_travel}},\n      \"name\":\"{{name}}\",\n      \"description\":\"{{description}}\",\n      \"predicted_date\":\"{{dateonly}}\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/travel/:idTravel/step/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"travel",
+								":idTravel",
+								"step",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET : all interestpoints assoicate to step",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/step/:id/interestpoint",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"step",
+								":id",
+								"interestpoint"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								},
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /step/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/travel/:idTravel/step",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"travel",
+								":idTravel",
+								"step"
+							],
+							"variable": [
+								{
+									"key": "idTravel",
+									"value": "{{id_travel}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "description",
+			"value": "this is a description"
+		},
+		{
+			"key": "type",
+			"value": "Point"
+		},
+		{
+			"key": "lng",
+			"value": "7.7"
+		},
+		{
+			"key": "lat",
+			"value": "48.2"
+		},
+		{
+			"key": "id_travel",
+			"value": "1"
+		},
+		{
+			"key": "content",
+			"value": "New content"
+		},
+		{
+			"key": "is_in_album",
+			"value": "true"
+		},
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "commentary",
+			"value": "this is a commentary"
+		},
+		{
+			"key": "is_finished",
+			"value": "false"
+		},
+		{
+			"key": "is_public",
+			"value": "false"
+		},
+		{
+			"key": "name",
+			"value": "Untitled"
+		},
+		{
+			"key": "dateonly",
+			"value": "2022-01-05"
+		},
+		{
+			"key": "is_terminated",
+			"value": "false"
+		},
+		{
+			"key": "order",
+			"value": "1"
+		},
+		{
+			"key": "duration",
+			"value": "1"
+		},
+		{
+			"key": "id_element",
+			"value": "5"
+		},
+		{
+			"key": "id_task_list",
+			"value": "1"
+		},
+		{
+			"key": "tagName",
+			"value": "Nature"
+		},
+		{
+			"key": "id_step",
+			"value": "\"NULL\""
+		},
+		{
+			"key": "id_departure_step",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "id_arrival_step",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "id_itinerary",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "id_tag",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
